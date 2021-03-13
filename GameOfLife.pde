@@ -9,7 +9,7 @@ private boolean running = true; //used to start and stop program
 
 public void setup () {
   size(400, 400);
-  frameRate(6);
+  frameRate(1);
   // make the manager
   Interactive.make( this );
   buttons = new Life[NUM_ROWS][NUM_COLS]; //creates a 2d array that is empty
@@ -79,7 +79,7 @@ public void copyFromBufferToButtons() {
         {
           buttons[r][c].setLife(false);
         }
-        buttons[r][c].draw();
+        //buttons[r][c].draw();
     }
   }
 }
@@ -113,35 +113,35 @@ public int countNeighbors(int row, int col) {
   int numneg = 0;
     if(isValid(row, col) == true)
   {
-    if(isValid(row - 1, col - 1) && buffer[row - 1][col - 1] == true)
+    if(isValid(row - 1, col - 1) && buttons[row - 1][col - 1].getLife() == true)
     {
       numneg++;
     }
-    if(isValid(row - 1, col) && buffer[row - 1][col] == true)
+    if(isValid(row - 1, col) && buttons[row - 1][col].getLife() == true)
     {
       numneg++;
     }
-    if(isValid(row - 1, col + 1) && buffer[row - 1][col + 1] == true)
+    if(isValid(row - 1, col + 1) && buttons[row - 1][col + 1].getLife() == true)
     {
       numneg++;
     }  
-    if(isValid(row, col - 1) && buffer[row][col - 1] == true)
+    if(isValid(row, col - 1) && buttons[row][col - 1].getLife() == true)
     {
       numneg++;
     }
-    if(isValid(row, col + 1) && buffer[row][col + 1] == true)
+    if(isValid(row, col + 1) && buttons[row][col + 1].getLife() == true)
     {
       numneg++;
     }
-    if(isValid(row + 1, col - 1) && buffer[row + 1][col - 1] == true)
+    if(isValid(row + 1, col - 1) && buttons[row + 1][col - 1].getLife() == true)
     {
       numneg++;
     }
-    if(isValid(row + 1, col) && buffer[row + 1][col] == true)
+    if(isValid(row + 1, col) && buttons[row + 1][col].getLife() == true)
     {
       numneg++;
     }
-    if(isValid(row + 1, col + 1) && buffer[row + 1][col + 1] == true)
+    if(isValid(row + 1, col + 1) && buttons[row + 1][col + 1].getLife() == true)
     {
       numneg++;
     }
