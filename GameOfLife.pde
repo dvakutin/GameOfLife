@@ -9,7 +9,7 @@ private boolean running = true; //used to start and stop program
 
 public void setup () {
   size(400, 400);
-  frameRate(1);
+  frameRate(6);
   // make the manager
   Interactive.make( this );
   buttons = new Life[NUM_ROWS][NUM_COLS]; //creates a 2d array that is empty
